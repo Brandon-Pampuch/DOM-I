@@ -297,3 +297,9 @@ footer {
         margin: 20px;
     }
 }
+
+
+.come-right{
+    transition: all 2s;
+    transform: translateX(300px)
+    }

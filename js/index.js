@@ -156,6 +156,13 @@ let footerProper = document.querySelector("footer p")
 footerProper.textContent = siteContent["footer"]["copyright"]
 
 
+const titleSlide = document.querySelector(".logo")
+
+titleSlide.addEventListener("click",(event)=>{
+  event.target.classList.toggle("come-right")
+})
+
+
 
 
 
