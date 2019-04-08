@@ -68,7 +68,11 @@ nav.prepend(prependB)
 // paragraph.prepend(blahImage) 
 
 
+//styles//
 
+
+header = document.querySelector("header")
+header.style.backgroundColor = "lightgrey"
 
 
 
