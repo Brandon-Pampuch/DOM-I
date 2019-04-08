@@ -39,112 +39,132 @@ const siteContent = {
 
 //Example: Update the img src for the logo
 
+
+
+
+let nav = document.querySelector("header nav")
+
+let appendA = document.createElement("a")
+appendA.style.color = "green"
+appendA.textContent = "Help"
+appendA.setAttribute("href", "#")
+nav.append(appendA)
+
+
+
+let prependB = document.createElement("p")
+prependB.textContent = "WAT"
+prependB.style.color = "green"
+prependB.setAttribute("href", "#")
+nav.prepend(prependB) 
+
+
+
+// const blahImage = document.createElement("img")
+// blahImage.src = "https://media0.giphy.com/media/3o7TKNPAmBQGXgEZpu/giphy.gif?cid=790b76115cab88a5506d4f64637ff410"
+
+// const paragraph = document.querySelector(".jumbotron .lead")
+
+// paragraph.prepend(blahImage) 
+
+
+
+
+
+
+// var parent = document.createElement("div");
+// var p = document.createElement("p");
+// parent.prepend("Some text", p);
+
+
+
+
+//header//************************** 
+
+let navbar = document.querySelectorAll('nav a')
+
+// navbar.forEach(function(aElem, i){
+//  return aElem[i].textContent = siteContent["nav"][`nav-item-${i + 1}`]
+// })
+
+navbar[0].textContent = siteContent["nav"]["nav-item-1"]
+navbar[1].textContent = siteContent["nav"]["nav-item-2"]
+navbar[2].textContent = siteContent["nav"]["nav-item-3"]
+navbar[3].textContent = siteContent["nav"]["nav-item-4"]
+
+//change color
+
+navbar[0].style.color = "green"
+navbar[1].style.color = "green"
+navbar[2].style.color = "green"
+navbar[3].style.color = "green"
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// let headerImg = document.getElementById("cta-img");
-// headerImg.setAttribute("src", "img/header-img.png");
+//cta//****************************
+
+let ctaHeader = document.querySelector('.cta-text h1')
+ctaHeader.textContent = siteContent["cta"]["h1"]
+
+let ctaButton = document.querySelector(".cta-text button")
+ctaButton.textContent = siteContent["cta"]["button"]
+
+let ctaImage = document.querySelector(".cta img")
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+//main-content//******************** 
+
+//top//
+
+let topCopyHeader = document.querySelectorAll(".top-content h4")
+
+topCopyHeader[0].textContent = siteContent["main-content"]["features-h4"]
+topCopyHeader[1].textContent = siteContent["main-content"]["about-h4"]
+
+let topCopyContent = document.querySelectorAll(".top-content p")
+
+topCopyContent[0].textContent = siteContent["main-content"]["features-content"]
+topCopyContent[1].textContent = siteContent["main-content"]["about-content"]
+
+let bannerImage = document.querySelector(".main-content img")
+bannerImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//bottom//
+
+let bottomCopyHeader = document.querySelectorAll(".bottom-content h4")
+
+bottomCopyHeader[0].textContent = siteContent["main-content"]["services-h4"]
+bottomCopyHeader[1].textContent = siteContent["main-content"]["product-h4"]
+
+let bottomCopyContent = document.querySelectorAll(".bottom-content p")
+
+bottomCopyContent[0].textContent = siteContent["main-content"]["services-content"]
+bottomCopyContent[1].textContent = siteContent["main-content"]["product-content"]
+
+//footer//****************************** 
+
+let footerHeader = document.querySelector(".contact h4")
+footerHeader.textContent = siteContent["contact"]["contact-h4"]
+
+let footerPar = document.querySelectorAll(".contact p")
+footerPar[0].textContent = siteContent["contact"]["address"]
+footerPar[1].textContent = siteContent["contact"]["phone"]
+footerPar[2].textContent = siteContent["contact"]["email"]
+
+let footerProper = document.querySelector("footer p")
+footerProper.textContent = siteContent["footer"]["copyright"]
 
 
 
 
 
-//nav
-let services = document.getElementsByTagName('a')[0];
-services.innerText = siteContent['nav']['nav-item-1'];
 
-//===================== Both ways below worked==================================
 
-//let product = document.getElementsByTagName('a')[1];
-//product.innerHTML = 'Product';
 
-//let product = document.getElementsByTagName('a')[1];
-//product.innerText = siteContent['nav']['nav-item-2'];
 
-//===============================================================================
 
-let product = document.getElementsByTagName('a')[1];
-product.innerText = siteContent['nav']['nav-item-2'];
 
-let vision = document.getElementsByTagName('a')[2];
-vision.innerText = siteContent['nav']['nav-item-3'];
 
-let features = document.getElementsByTagName('a')[3];
-features.innerText = siteContent['nav']['nav-item-4'];
 
-let about = document.getElementsByTagName('a')[4];
-about.innerText = siteContent['nav']['nav-item-5'];
 
-let contact = document.getElementsByTagName('a')[5];
-contact.innerText = siteContent['nav']['nav-item-6'];
-
-// cta
-
-let h1_ = document.getElementsByTagName('h1')[0];
-h1_.innerText = siteContent['cta']['h1'];
-
-let button = document.getElementsByTagName("button")[0];
-button.innerText = siteContent['cta']['button'];
-
-let headerImg = document.getElementById("cta-img");
-headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
-
-let middleImg = document.getElementById("middle-img");
-middleImg.setAttribute("src", "img/mid-page-accent.jpg")
-
-// main-content
-
-let featuresH4 = document.getElementsByTagName('h4')[0];
-featuresH4.innerText = siteContent['main-content']['features-h4'];
-
-let featuresContent = document.getElementsByTagName('p')[0];
-featuresContent.innerText = siteContent['main-content']['features-content'];
-
-let about_H4 = document.getElementsByTagName('h4')[1];
-about_H4.innerText = siteContent['main-content']['about-h4'];
-
-let aboutContent_1 = document.getElementsByTagName('p')[1];
-aboutContent_1.innerText = siteContent['main-content']['about-content'];
-
-let services_H4 = document.getElementsByTagName('h4')[2];
-services_H4.innerText = siteContent['main-content']['services-h4'];
-
-let servicesContent = document.getElementsByTagName('p')[2];
-servicesContent.innerText = siteContent['main-content']['services-content'];
-
-let product_H4 = document.getElementsByTagName('h4')[3];
-product_H4.innerText = siteContent['main-content']['product-h4'];
-
-let productContent = document.getElementsByTagName('p')[3];
-productContent.innerText = siteContent['main-content']['product-content'];
-
-let vision_H4 = document.getElementsByTagName('h4')[4];
-vision_H4.innerText = siteContent['main-content']['vision-h4'];
-
-let visionContent = document.getElementsByTagName('p')[4];
-visionContent.innerText = siteContent['main-content']['vision-content'];
-
-// Contact
-
-let contact_H4 = document.getElementsByTagName('h4')[5];
-contact_H4.innerText = siteContent['contact']['contact-h4'];
-let address = document.getElementsByTagName('p')[5];
-address.innerText = siteContent['contact']['address'];
-let phone = document.getElementsByTagName('p')[6];
-phone.innerText = siteContent['contact']['phone'];
-let email = document.getElementsByTagName('p')[7];
-email.innerText = siteContent['contact']['email'];
-
-//footer
-let footer = document.getElementsByTagName('p')[8];
-footer.innerText = siteContent['footer']['copyright'];
-
- //let aTags = document.querySelectorAll("a");
-// let i;
-// for (i = 0; i < aTags.length; i++) {
-//   aTags[i].style.color = "red";
-// }
-
-// aTags.forEach(element => {
-//   element.style.color = 'blue';
-// });
